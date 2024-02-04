@@ -1,0 +1,329 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #F6F0EB;
+    font-family: 'Poppins', sans-serif;
+    color: #492118;
+    /* overflow-x: hidden;  not perform well in case of mobile view*/
+}
+
+.main-content{
+    overflow-x: hidden;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration-line: none;
+    color: inherit;
+}
+header{
+    background-color: #ffffff;
+    padding: 20px
+}
+.header-content{
+    max-width: 1290px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    margin: 0 auto;
+}
+nav{
+    display: flex;
+    /* gap: 60px; */
+}
+/* OR */
+/* a+a means not on the 1st element but all element */
+nav a + a{
+margin-left: 58px;
+}
+
+nav a{
+color: rgba(73, 33, 24, 1);
+font-size: 20px;
+font-weight: 600;
+}
+
+.close-icon{
+    position: absolute;
+    right: 16px;
+    top: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+}
+.logo{
+    width: 50px;
+}
+img{
+    width: 100%;
+}
+
+main{
+    padding: 0 24px;
+}
+main h1{
+    margin-top: 3em;
+    text-align: center;
+    font-size: 40px;
+}
+.whopper-section{
+    margin-top: 100px;
+}
+
+.image-container{
+    max-width: 1290px;
+    margin: 0 auto;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.whopper-section p {
+    color: inherit;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.section{
+    margin-top: 160px;
+}
+
+.section .image-container{
+    max-width: 962px;
+    margin-top: 45px;
+}
+.section .last{
+    max-width: 962px;
+    margin-top: 45px;
+    margin-bottom: 5em;
+}
+
+.section h2{
+    color: inherit;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.go-to-top{
+    text-align: right;
+    max-width: 962px;
+    margin: 45px auto;
+    font-size: 32px;
+    cursor: pointer;
+}
+.go-to-top a{
+    text-decoration-line: underline;
+    text-decoration-line: none;
+}
+#Copyright{
+    text-align: center;
+    font-size: 17px;
+    /* margin: 40px 0; */
+    margin: 40px 0 10px 0;
+    color: black;
+}
+#myName{
+    text-align: center;
+    font-size: 22px;
+    /* margin: 40px 0; */
+    margin: 40px 0 0px 0;
+    color: #858585;
+}
+
+.hamburger-menu-container{
+    width: 80px;
+    height: 75px;
+    position: relative;
+    border-radius: 0% 0% 0% 100%;
+    background-color: white;
+    display: none;
+}
+
+.hamburger-menu{
+    position: absolute;
+    right: 16px;
+    top: 8px;
+}
+.hamburger-menu-icon{
+    font-size: 32px;
+    cursor: pointer;
+    /* position: absolute; */
+}
+@media (max-width: 1200px){
+
+    main h1{
+        font-size: 32px;
+        transition: font-size .3s ease-in-out;
+    }
+    nav a{
+        color: rgba(73, 33, 24, 1);
+        font-size: 18px;
+        }
+    nav a + a{
+        margin-left: 32px;
+    }    
+}
+@media (max-width: 960px){
+
+    main h1{
+        font-size: 28px;
+        transition: font-size .3s ease-in-out;
+    }
+    .whopper-section{
+        margin-top: 32px;
+    }
+    /* .whopper-section p {
+        font-size: 15px;
+    } */
+   
+    main h1{
+        margin-top: 1.2em;
+        font-size: 20px;
+    }
+    .section{
+        margin-top: 62px;
+    }
+    /* .section h2{
+        font-size: 16px;
+        margin-bottom: -20px;
+    } */
+    nav a{
+        color: rgba(73, 33, 24, 1);
+        font-size: 14px;
+        transition: font-size .3s ease-in-out;
+        }
+    nav a + a{
+        margin-left: 21px;
+    }    
+    header{
+        padding: 12px 22px 12px 20px;
+    }
+    .go-to-top{
+        
+        margin: 45px auto;
+        font-size: 28px;
+        padding: 0 24px;
+    }
+    
+    #footer h3{
+        font-size: 28px;
+    }
+    #footer p{
+        font-size: 16px;
+    }
+    #footer #aboutUs {
+        margin-left: 48px;
+        margin-top: 40px;
+    }
+    #footer #aboutUs p{
+        font-size: 14px;
+    }
+    #footer svg{
+        width: 80%;
+    }
+}
+
+@media (max-width:720px){
+    
+    header{
+        background-color: #fef0ebb7;
+        backdrop-filter: blur(7px);
+        position: sticky;
+        top: 0;
+    }
+
+    .header-content{
+    min-height: 75px;   /* same height as .hamburger-menu-container*/
+    }
+
+    nav{
+        position: absolute;
+        background-color: rgba(225, 225, 225, 0.9);
+        flex-direction: column;
+        right: -215px;
+        top: 12px;
+        padding: 25px 48px 35px 20px;
+        /* display: none; */
+        transition: right 0.30s ease-in-out;
+    }
+    nav a + a{
+        margin: 0;
+        margin-top: 16px;
+    }
+    .whopper-section p {
+        font-size: 15px;
+    }
+    .section h2{
+        font-size: 18px;
+        margin-bottom: -20px;
+    }
+    .close-icon, .hamburger-menu-container{
+        display: block;
+    }
+    .menu-open nav{
+        /* display: flex; */
+        right: 22px;
+    }
+    .menu-open  .hamburger-menu-container{
+        display: none;
+    }
+    #footer #container{
+        padding: 0 24px;
+        
+    }
+    #Copyright{
+        /* font-size: 12px; */
+        margin: 15px;
+    }
+    #myName{
+        margin-top: 10px;
+    }
+    .go-to-top{
+        
+        margin: 45px auto;
+        font-size: 16px;
+        padding: 0 24px;
+        font-weight: 700;
+    }
+    
+    #footer h3{
+        font-size: 20px;
+        margin-bottom: 7px;
+    }
+    #footer p{
+        font-size: 10px;
+    }
+    #container > div:nth-child(1){
+        margin-top: -20px;
+        line-height: 15px;
+    }
+    
+   
+    #footer #aboutUs p{
+        font-size: 10px;
+        line-height: 25px;
+    }
+    #footer svg{
+        width: 60%;
+    }
+    
+}
+
+@media (max-width:480px){
+    #aboutUs{
+        display: none;
+    }
+    #container > div:nth-child(1){
+        margin-top: 0px;
+        line-height: 14px;
+
+    }
+}
